@@ -4,11 +4,12 @@ const btnDesencriptar = document.getElementById("btn-desencriptar");
 const textoEntrada = document.getElementById("texto-entrada");
 const areaTextoSalida = document.querySelector(".area-texto-salida");
 const notFound = document.getElementById("notFound");
+const resultado = document.getElementById("resultado");
 
 // Función para mostrar el mensaje de "No encontrado"
 function mostrarNotFound() {
-  notFound.style.display = "flex";
-  areaTextoSalida.replaceChildren(notFound);
+    resultado.style.display= "none";
+    notFound.style.display = "block";
 }
 
 // Función para encriptar la cadena de caracteres
@@ -44,7 +45,6 @@ btnEncriptar.addEventListener("click", () => {
   if (texto.trim() !== "") {
     const textoEncriptado = encriptar(texto);
 
-    const resultado = document.getElementById("resultado");
     const textoSalida = document.getElementById("texto-salida");
     const btnCopiar = document.getElementById("btn-copiar");
     
@@ -63,7 +63,6 @@ btnDesencriptar.addEventListener("click", () => {
   if (texto.trim() !== "") {
     const textoDesencriptado = desencriptar(texto);
     
-    const resultado = document.getElementById("resultado");
     const textoSalida = document.getElementById("texto-salida");
     const btnCopiar = document.getElementById("btn-copiar");
 
