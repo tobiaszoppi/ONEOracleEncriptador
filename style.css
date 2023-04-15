@@ -133,10 +133,24 @@ button {
   color: white;
 }
 
+#btn-encriptar:active {
+  background-color: #0a1c33;
+  border-color: #0a3871;
+  color: white;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
 #btn-desencriptar {
-  background-color: #d8dfe8;
+  background-color: #ffffff;
   color: black;
   margin-left: 10px;
+}
+
+#btn-desencriptar:active {
+  background-color: #b9d0e6;
+  border-color: #62758b;
+  color: white;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 @media screen and (max-width: 768px) and (max-height: 1174px) {

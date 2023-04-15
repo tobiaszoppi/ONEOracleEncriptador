@@ -69,7 +69,7 @@ btnDesencriptar.addEventListener("click", () => {
     textoSalida.value = textoDesencriptado;
     notFound.style.display = "none";
     btnCopiar.addEventListener("click", copiarTexto);
-    resultado.style.display = "block";
+    resultado.style.display = "flex";
   } else {
     mostrarNotFound();
   }
