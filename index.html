@@ -26,10 +26,17 @@
         </div>
       </div>
       <div class="area-texto-salida">
-        <img src="img/muñeco.png" alt="Muñeco">
-        <h1>Ningún mensaje fue encontrado</h1>
-        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        <div id="notFound">
+          <img src="img/muñeco.png" alt="Muñeco">
+          <h1>Ningún mensaje fue encontrado</h1>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+        <div id="resultado" style="display: none;">
+          <textarea id="texto-salida" readonly></textarea>
+          <button id="btn-copiar">Copiar</button>
+        </div>
       </div>
+      
     </div>
     <script src="script.js"></script>
   </body>
