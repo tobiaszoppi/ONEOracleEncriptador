@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Encriptador</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+
+<body>
 
     <div class="titulo">
         <img src="img/vector.png" alt="">
@@ -14,30 +16,32 @@
     </div>
 
     <div class="container">
-      <div class="area-texto-entrada">
-        <textarea id="texto-entrada" name="texto-entrada" placeholder="Ingrese una cadena de caracteres:"></textarea>
-        <div class="area-info">
-            <img src="img/iconoinfo.png" alt="">
-            <span>Solo letras minúsculas y sin acentos</span>
+        <div class="area-texto-entrada">
+            <textarea id="texto-entrada" name="texto-entrada"
+                placeholder="Ingrese una cadena de caracteres:"></textarea>
+            <div class="area-info">
+                <img src="img/iconoinfo.png" alt="">
+                <span>Solo letras minúsculas y sin acentos</span>
+            </div>
+            <div class="area-botones">
+                <button id="btn-encriptar">Encriptar</button>
+                <button id="btn-desencriptar">Desencriptar</button>
+            </div>
         </div>
-        <div class="area-botones">        
-            <button id="btn-encriptar">Encriptar</button>
-            <button id="btn-desencriptar">Desencriptar</button>
+        <div class="area-texto-salida">
+            <div id="notFound">
+                <img src="img/muñeco.png" alt="Muñeco">
+                <h1>Ningún mensaje fue encontrado</h1>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div id="resultado" style="display: none;">
+                <textarea id="texto-salida" readonly></textarea>
+                <button id="btn-copiar">Copiar</button>
+            </div>
         </div>
-      </div>
-      <div class="area-texto-salida">
-        <div id="notFound">
-          <img src="img/muñeco.png" alt="Muñeco">
-          <h1>Ningún mensaje fue encontrado</h1>
-          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-        </div>
-        <div id="resultado" style="display: none;">
-          <textarea id="texto-salida" readonly></textarea>
-          <button id="btn-copiar">Copiar</button>
-        </div>
-      </div>
-      
+
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
