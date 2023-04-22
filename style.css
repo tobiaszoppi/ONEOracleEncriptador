@@ -50,6 +50,7 @@ html, body {
   flex-direction: column;
   justify-content: center;
   flex: 2;
+  align-items: center;
 }
 
 .area-texto-salida #resultado #texto-salida {
