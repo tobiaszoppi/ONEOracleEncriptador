@@ -33,6 +33,7 @@ function desencriptar(cadena) {
     return cadena;
 }
 
+// Funcion para copiar texto
 function copiarTexto() {
     const texto = document.getElementById("texto-salida");
     texto.select();
@@ -40,18 +41,17 @@ function copiarTexto() {
     alert("Texto copiado al portapapeles");
 }
 
-function contieneMayusculaOMinusculaAcento(cadena) {
+// Funcion para verificar Mayusculas o Minusculas acentuadas
+function contieneProhibidas(cadena) {
     let regex = /[A-ZÁÉÍÓÚ]/; 
     let regex2 = /[áéíóú]/; 
     return regex.test(cadena) || regex2.test(cadena);
-  }
-  
-  
+}
 
 // Evento de clic en el botón "Encriptar"
 btnEncriptar.addEventListener("click", () => {
     const texto = textoEntrada.value;
-    if (texto.trim() !== "" && !contieneMayusculaOMinusculaAcento(texto)) {
+    if (texto.trim() !== "" && !contieneProhibidas(texto)) {
         const textoEncriptado = encriptar(texto);
 
         const textoSalida = document.getElementById("texto-salida");
