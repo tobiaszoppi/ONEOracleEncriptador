@@ -1,18 +1,21 @@
-html,
-body {
+html, body {
   background-color: #f3f5fc;
   font-family: 'Inter', sans-serif;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
-.titulo {
+.titulo a {
+  color: black;
+  width: 50%;
+  /* padding-top: 2%; */
+  padding-left: 3%;
   position: absolute;
-  top: 0;
-  left: 0;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  margin: 5%;
 }
 
 .titulo img {
@@ -22,8 +25,7 @@ body {
 .container {
   display: flex;
   height: 100%;
-  padding: 3%;
-  flex-wrap: wrap;
+  /* padding: 3%; */
   justify-content: center;
   align-content: flex-start;
   box-sizing: border-box;
@@ -31,21 +33,19 @@ body {
 
 .area-texto-salida {
   flex: 1;
-  max-width: 500px;
-  height: 100%;
-  padding: 2%;
   display: flex;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 5px 8px 5px rgba(0, 0, 0, 0.2);
+  margin: 3%;
   text-align: center;
   box-sizing: border-box;
   align-items: center;
+  justify-content: center;
 }
 
 .area-texto-salida #resultado {
-  height: 100%;
-  width: 100%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,17 +53,13 @@ body {
 }
 
 .area-texto-salida #resultado #texto-salida {
-  flex: 1;
+  width: 80%;
+  height: 100%;
   color: black;
   font-weight: bold;
   font-size: 1.2em;
   text-align: left;
   border: none;
-  width: 80%;
-  height: 100%;
-  padding: 10px;
-  margin-top: 5%;
-  margin-bottom: 10%;
 }
 
 .area-texto-salida img {
@@ -84,6 +80,7 @@ body {
 .area-texto-entrada {
   flex: 2;
   height: 100%;
+  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,18 +88,14 @@ body {
 }
 
 #texto-entrada {
-  flex: 1;
+  width: 80%;
+  height: 60%;
+  border: none;
   color: navy;
   font-weight: bold;
   font-size: 1.2em;
   text-align: left;
-  border: none;
   background-color: #f3f5fc;
-  width: 80%;
-  height: 100px;
-  padding: 10px;
-  margin-top: 30%;
-  margin-bottom: 10%;
 }
 
 #texto-entrada::placeholder {
@@ -154,49 +147,39 @@ button {
 }
 
 @media screen and (max-width: 768px) and (max-height: 1174px) {
+
+  .titulo a {
+    font-size: 60%;
+  }
   .container {
     flex-direction: column;
     align-items: center;
   }
 
   .area-texto-salida {
-    flex: 0;
+    flex: 1;
     width: 100%;
     height: 100%;
+  }
+
+  .area-texto-salida #resultado #texto-salida {
+    height: auto !important;
+    min-height: 100%;
   }
 
   .area-texto-entrada {
     width: 100%;
     height: 100%;
-    margin-top: 5%;
+    margin-top: 25%;
     margin-bottom: 5%;
   }
-
+  
   #texto-entrada {
     width: 90%;
-    height: 100%;
-    margin-top: 20%;
+    height: 70%;
   }
 
   .area-texto-salida img {
     display: none;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-height: 1174px) {
-  .area-texto-entrada {
-    animation-name: reverse-margin-top;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes reverse-margin-top {
-    from {
-      margin-top: 20%;
-    }
-
-    to {
-      margin-top: 0%;
-    }
   }
 }

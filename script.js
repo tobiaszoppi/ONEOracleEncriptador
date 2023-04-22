@@ -5,6 +5,7 @@ const textoEntrada = document.getElementById("texto-entrada");
 const areaTextoSalida = document.querySelector(".area-texto-salida");
 const notFound = document.getElementById("notFound");
 const resultado = document.getElementById("resultado");
+const aviso = document.getElementById("aviso");
 
 // Función para mostrar el mensaje de "No encontrado"
 function mostrarNotFound() {
@@ -39,10 +40,18 @@ function copiarTexto() {
     alert("Texto copiado al portapapeles");
 }
 
+function contieneMayusculaOMinusculaAcento(cadena) {
+    let regex = /[A-ZÁÉÍÓÚ]/; 
+    let regex2 = /[áéíóú]/; 
+    return regex.test(cadena) || regex2.test(cadena);
+  }
+  
+  
+
 // Evento de clic en el botón "Encriptar"
 btnEncriptar.addEventListener("click", () => {
     const texto = textoEntrada.value;
-    if (texto.trim() !== "") {
+    if (texto.trim() !== "" && !contieneMayusculaOMinusculaAcento(texto)) {
         const textoEncriptado = encriptar(texto);
 
         const textoSalida = document.getElementById("texto-salida");
