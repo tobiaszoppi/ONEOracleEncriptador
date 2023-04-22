@@ -17,5 +17,6 @@ utilizan expresiones regulares para realizar las transformaciones de manera efec
 Interacción con el usuario: El proyecto permite al usuario copiar el resultado del proceso en el 
 portapapeles con un solo clic, lo que mejora la experiencia de usuario.
 
-https://user-images.githubusercontent.com/87771971/232207441-3ddf7540-0012-43f2-a082-38ca1da38c2f.mp4
+
+https://user-images.githubusercontent.com/87771971/233761630-00bef11b-5b49-4630-bf4f-5cefa8219c0d.mp4
 
