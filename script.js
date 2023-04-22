@@ -41,12 +41,16 @@ function copiarTexto() {
     alert("Texto copiado al portapapeles");
 }
 
-// Funcion para verificar Mayusculas o Minusculas acentuadas
+// Funcion para verificar Mayusculas, Minusculas acentuadas, Caracteres especiales o numeros
 function contieneProhibidas(cadena) {
-    let regex = /[A-ZÁÉÍÓÚ]/; 
-    let regex2 = /[áéíóú]/; 
-    return regex.test(cadena) || regex2.test(cadena);
+    let regex = /[A-ZÁÉÍÓÚ]/;
+    let regex2 = /[áéíóú]/;
+    let regex3 = /[^a-zA-Z0-9\s]/g;
+    let regex4 = /[\d]/g;
+    return regex.test(cadena) || regex2.test(cadena) || regex3.test(cadena) || regex4.test(cadena);
 }
+  
+  
 
 // Evento de clic en el botón "Encriptar"
 btnEncriptar.addEventListener("click", () => {
